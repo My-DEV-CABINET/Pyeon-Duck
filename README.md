@@ -2,8 +2,6 @@
 
 # 1. 소개 및 기간
 
-<img src="https://velog.velcdn.com/images/jakkujakku98/post/3774f044-3ccf-49f5-836f-698f4f2d0617/image.png" width="50%" height="50%">
-
 ### 1.1 소개
 
 - 매번 종이로 일일이 적기 불편하셨던 분들을 위한 서비스를 만들었습니다.
