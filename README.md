@@ -1,70 +1,115 @@
 # 편의점 덕후 : 편의점 업무 도우미
 
-------
+# 1. 소개 및 기간
 
-<img width="1372" alt="AppStoreImage" src="https://velog.velcdn.com/images/jakkujakku98/post/d99f4a92-61f6-433c-9434-453697a30dfa/image.png">
+<img src="https://velog.velcdn.com/images/jakkujakku98/post/3774f044-3ccf-49f5-836f-698f4f2d0617/image.png" width="50%" height="50%">
 
-## 기획
+### 1.1 소개
 
-------
+- 매번 종이로 일일이 적기 불편하셨던 분들을 위한 서비스를 만들었습니다.
+  이제 편의점 덕후와 함께 효율적으로 일해보세요!
 
-아르바이트를 하면서, 종이를 계속 사용하여 물건들을 기록하였습니다.
+### 1.2 개발 기간
 
-그러다보니, 적은 종이를 못 찾는 상황이 발생하거나, 사라지는 문제들이 있었습니다.
+- 2023.12.26 - 2024.1.2 (1주)
 
-그래서 디지털화 할 수 있는 앱이 필요하다고 생각했습니다.
+## 2. 목표와 기능
 
-특히, 아르바이트를 많이 하는 사람들이 있다는 점을 고려했을 때, 수요가 충분하고 유저들의 니즈 또한 충족할 수 있는 서비스라고 여겨서 기획하였습니다.
+### 2.1 목표
 
+- CoreData 를 사용하여 유통기한/재고 물품 내역을 저장하는 것
+- 일하는 시간과 시급을 입력하여, 나의 일급/주급/월급을 계산하는 것
 
+### 2.2 기능
 
-## App 간단 소개
+- 유통기한 알림 기능
+- 유통기한 상품 작성 기능
+- 상품 조사 카테고리 / 아이템 작성 기능
+- 일급 / 주급 / 월급 계산 기능
 
-------
+## 3. 개발 환경
 
-매번 종이로 일일이 적기 불편하셨던 분들을 위한 서비스를 만들었습니다.
+### 3.1 개발 환경 및 배포 URL
 
-이제 편의점 덕후와 함께 효율적으로 일해보세요!
-
-
-
-## Development Environment and Libraries
-
-------
-
-<div> <img src="https://img.shields.io/badge/ UIKit - iOS -lightgrey.svg?{ style(optional) }" />
-<img src="https://img.shields.io/badge/ Xcode - 15.0.2 -0099E5.svg?{ style(optional) }" />
-<img src="https://img.shields.io/badge/ Swift - 5.9 -success.svg?{ style(optional) }" />
-<img src="https://img.shields.io/badge/ iOS -  16.0 -orange.svg?{ style(optional) }" /></div>
-
-
-
-## 주요 기능
-
-------
-
-### 유통기한 알림 기능
-
-- 오늘 일자의 유통기한 마감되는 품목이 몇 개 있는지 알려드립니다!
-
-### 유통기한 상품 작성 기능
-
-- 유통기한을 작성하고, 유통 기한 리스트를 날짜별로 쉽게 확인 해보세요. 달력으로 분류되어 보기 쉽습니다!!
-
-### 상품 조사 카테고리 / 아이템 작성 기능
-
-- 암기하면서 물건을 채우셨나요?
-  더 이상 암기하면서 채우지 마세요.
-  최대한 쉽게 물건을 기록해보세요!!
-
-### 일급 / 주급 / 월급 계산 기능
-
-- 나의 일급 / 주급 / 월급이 궁금하지 않으셨나요?
+- 버전 정보
+  - iOS 16.0 이상
+- 라이브러리 및 프레임워크
+  - `UIKit`
+  - `CoreData`
 
 
+## 4. UI
 
-## Notion Link 🔗
+### 4.1 페이지별 화면
 
-------
+<table>
+    <tbody>
+        <tr>
+            <td>유통기한 물품 조회 페이지</td>
+            <td>유통기한 물품 작성 페이지</td>
+        </tr>
+        <tr>
+            <td>
+		<img src="https://velog.velcdn.com/images/jakkujakku98/post/8469eefb-91f5-4ebd-a2aa-c381b0582f2a/image.gif" width="100%">
+            </td>
+            <td>
+                <img src="https://velog.velcdn.com/images/jakkujakku98/post/ef4ccd5f-da56-4ec9-bdb5-66a151c8cc99/image.gif" width="100%">
+            </td>
+        </tr>
+        <tr>
+            <td>상품 보충 카테고리 페이지</td>
+            <td>상품 보충 아이템 페이지</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="https://velog.velcdn.com/images/jakkujakku98/post/d9723a67-5838-40a6-9890-271f2408dc8a/image.gif" width="100%">
+            </td>
+            <td>
+                <img src="https://velog.velcdn.com/images/jakkujakku98/post/9aa17610-1a0a-450f-9f8d-07e13fcd4c25/image.gif" width="100%">
+            </td>
+        </tr>
+        <tr>
+            <td>상품 조회 작성 페이지</td>
+            <td>일급/주급/월급 계산 페이지</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="https://velog.velcdn.com/images/jakkujakku98/post/e47aa672-6b93-40cc-b773-28bc37433cb7/image.gif" width="100%">
+            </td>
+            <td>
+                <img src="https://velog.velcdn.com/images/jakkujakku98/post/90cc58fd-eda3-49c0-a584-8298f7f97b80/image.gif" width="100%">
+            </td>
+        </tr>
+      <tbody/>
+    <table/>
 
-- [Notion][https://jakkujakku98.notion.site/d211a9d3a8d044db9f5b458a7d72633b?pvs=4]
+## 5. 데이터베이스 모델링(ERD)
+
+```mermaid
+erDiagram
+		%% 유통기한
+    ExpirationDate {
+        integer id
+        String title
+        String date
+        bool isConfirm
+        binary itemImage
+        String modifiedDate
+    }
+		
+		%% 상품조회 카테고리
+    Category {
+        String categoryTitle
+    }
+
+		%% 상품조회 아이템
+    Item {
+        String itemTitle
+        bool isConfirm
+        binary itemImage
+        integer itemCount
+        String categoryTitle
+    }
+
+    Category ||--o{ Item : "categoryTitle"
+```
