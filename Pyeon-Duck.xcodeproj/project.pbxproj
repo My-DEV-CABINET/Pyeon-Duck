@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -105,6 +105,9 @@
 		412407031BB4241B180C8F99 /* Pyeon_DuckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pyeon_DuckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49826E59FE142FB88745971B /* StockItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockItemViewModel.swift; sourceTree = "<group>"; };
 		4C4E0ED827F6F81E5D9C4023 /* StockItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockItemCell.swift; sourceTree = "<group>"; };
+		4EA90BCA2C593AA4006D35DE /* Expiration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Expiration.storyboard; path = "/Users/wnsdnrla/Desktop/DEVELOPER/스위프트 개발/프로젝트/개인 프로젝트/Pyeon-Duck/Pyeon-Duck/Resources/Expiration.storyboard"; sourceTree = "<absolute>"; };
+		4EA90BCB2C593AD5006D35DE /* Stocks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Stocks.storyboard; path = "/Users/wnsdnrla/Desktop/DEVELOPER/스위프트 개발/프로젝트/개인 프로젝트/Pyeon-Duck/Pyeon-Duck/Resources/Stocks.storyboard"; sourceTree = "<absolute>"; };
+		4EA90BCC2C593AFD006D35DE /* Salary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Salary.storyboard; path = "/Users/wnsdnrla/Desktop/DEVELOPER/스위프트 개발/프로젝트/개인 프로젝트/Pyeon-Duck/Pyeon-Duck/Resources/Salary.storyboard"; sourceTree = "<absolute>"; };
 		5525E49FC77BB66F158D9CFE /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		55A98E8E5E63F254DEBF0703 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58D9EAE827BB659CCE4CEC7A /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
@@ -179,6 +182,9 @@
 			children = (
 				D9B6E4158E0BACC6915BAC2D /* LaunchScreen.storyboard */,
 				A7F736CE19BD3E706DDCBEE2 /* Main.storyboard */,
+				4EA90BCA2C593AA4006D35DE /* Expiration.storyboard */,
+				4EA90BCB2C593AD5006D35DE /* Stocks.storyboard */,
+				4EA90BCC2C593AFD006D35DE /* Salary.storyboard */,
 				D8CAD28ADD40C70F1CD2D6F3 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -597,10 +603,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -681,10 +684,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
