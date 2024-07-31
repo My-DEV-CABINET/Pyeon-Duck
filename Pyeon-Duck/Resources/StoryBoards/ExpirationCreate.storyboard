@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xa-bP-CcW">
+                                <rect key="frame" x="0.0" y="251.33333333333331" width="393" height="600.66666666666674"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIe-Sn-8Ct">
+                                        <rect key="frame" x="12" y="11.999999999999972" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fIe-Sn-8Ct" secondAttribute="height" multiplier="1:1" id="2pv-Q7-Qy9"/>
+                                            <constraint firstAttribute="width" constant="40" id="C1B-RN-pPk"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCZ-aC-7Pu">
+                                        <rect key="frame" x="74" y="81.999999999999972" width="245" height="245.00000000000003"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gCZ-aC-7Pu" secondAttribute="height" multiplier="1:1" id="uue-eI-65R"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="camera.circle.fill" catalog="system" title="Camera">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22"/>
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="상품명을 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nLV-FD-0Ws">
+                                        <rect key="frame" x="32" y="361" width="267" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMZ-Wy-cbs">
+                                        <rect key="frame" x="321" y="358" width="40" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="FhI-xn-uZg"/>
+                                            <constraint firstAttribute="width" secondItem="DMZ-Wy-cbs" secondAttribute="height" multiplier="1:1" id="bJd-Fu-r2z"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="mic.circle" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" verticalHuggingPriority="255" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Veo-gw-Uwc">
+                                        <rect key="frame" x="32" y="429" width="329" height="36"/>
+                                        <locale key="locale" localeIdentifier="ko_KR"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sx-E0-gdX">
+                                        <rect key="frame" x="68" y="11.999999999999972" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Lb5-pC-IPr"/>
+                                            <constraint firstAttribute="width" secondItem="0Sx-E0-gdX" secondAttribute="height" multiplier="1:1" id="Z0U-4K-9qe"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="eraser.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkc-vM-U8J">
+                                        <rect key="frame" x="32" y="505.3333333333332" width="329" height="40.333333333333314"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="SAVE">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="gCZ-aC-7Pu" firstAttribute="leading" secondItem="fIe-Sn-8Ct" secondAttribute="trailing" constant="22" id="0MQ-hS-VcD"/>
+                                    <constraint firstItem="gCZ-aC-7Pu" firstAttribute="centerX" secondItem="5xa-bP-CcW" secondAttribute="centerX" id="0Wp-XT-K31"/>
+                                    <constraint firstItem="0Sx-E0-gdX" firstAttribute="centerY" secondItem="fIe-Sn-8Ct" secondAttribute="centerY" id="3G9-TT-Aft"/>
+                                    <constraint firstItem="Veo-gw-Uwc" firstAttribute="trailing" secondItem="DMZ-Wy-cbs" secondAttribute="trailing" id="BFs-no-yhH"/>
+                                    <constraint firstItem="nLV-FD-0Ws" firstAttribute="top" secondItem="gCZ-aC-7Pu" secondAttribute="bottom" constant="34" id="CnG-PZ-8PI"/>
+                                    <constraint firstItem="fIe-Sn-8Ct" firstAttribute="top" secondItem="5xa-bP-CcW" secondAttribute="top" constant="12" id="D2L-JQ-gdE"/>
+                                    <constraint firstAttribute="bottom" secondItem="vkc-vM-U8J" secondAttribute="bottom" constant="55" id="Gn5-hL-0jd"/>
+                                    <constraint firstItem="gCZ-aC-7Pu" firstAttribute="top" secondItem="fIe-Sn-8Ct" secondAttribute="bottom" constant="30" id="MOk-F6-XJY"/>
+                                    <constraint firstItem="DMZ-Wy-cbs" firstAttribute="leading" secondItem="nLV-FD-0Ws" secondAttribute="trailing" constant="22" id="McF-3K-Y8o"/>
+                                    <constraint firstAttribute="trailing" secondItem="DMZ-Wy-cbs" secondAttribute="trailing" constant="32" id="R22-j5-OKn"/>
+                                    <constraint firstItem="vkc-vM-U8J" firstAttribute="leading" secondItem="5xa-bP-CcW" secondAttribute="leading" constant="32" id="bM2-dr-C0i"/>
+                                    <constraint firstItem="vkc-vM-U8J" firstAttribute="top" secondItem="Veo-gw-Uwc" secondAttribute="bottom" constant="40" id="bWX-oG-uZ4"/>
+                                    <constraint firstItem="fIe-Sn-8Ct" firstAttribute="leading" secondItem="5xa-bP-CcW" secondAttribute="leading" constant="12" id="h6W-yi-4sU"/>
+                                    <constraint firstItem="DMZ-Wy-cbs" firstAttribute="centerY" secondItem="nLV-FD-0Ws" secondAttribute="centerY" id="kUW-ok-h6u"/>
+                                    <constraint firstItem="Veo-gw-Uwc" firstAttribute="leading" secondItem="nLV-FD-0Ws" secondAttribute="leading" id="oPD-6j-v6P"/>
+                                    <constraint firstItem="vkc-vM-U8J" firstAttribute="centerX" secondItem="5xa-bP-CcW" secondAttribute="centerX" id="sDq-AC-vsH"/>
+                                    <constraint firstItem="Veo-gw-Uwc" firstAttribute="top" secondItem="nLV-FD-0Ws" secondAttribute="bottom" constant="34" id="tg7-Sy-E9F"/>
+                                    <constraint firstItem="0Sx-E0-gdX" firstAttribute="leading" secondItem="fIe-Sn-8Ct" secondAttribute="trailing" constant="16" id="u1e-Ld-Ch5"/>
+                                    <constraint firstItem="nLV-FD-0Ws" firstAttribute="leading" secondItem="5xa-bP-CcW" secondAttribute="leading" constant="32" id="xwc-fg-M7z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5xa-bP-CcW" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="D3Q-T7-S1b"/>
+                            <constraint firstItem="5xa-bP-CcW" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="JLV-a8-GDy"/>
+                            <constraint firstItem="5xa-bP-CcW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qWV-0C-O21"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="eraser.fill" catalog="system" width="128" height="119"/>
+        <image name="mic.circle" catalog="system" width="128" height="123"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

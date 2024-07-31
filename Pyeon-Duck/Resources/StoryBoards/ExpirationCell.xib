@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="95" id="Og9-mH-WQA">
+            <rect key="frame" x="0.0" y="0.0" width="411" height="95"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Og9-mH-WQA" id="FA8-U2-oCO">
+                <rect key="frame" x="0.0" y="0.0" width="411" height="95"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="두바이 초콜릿" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMt-p8-hgQ">
+                        <rect key="frame" x="85.999999999999986" y="22" width="140.66666666666663" height="30.333333333333329"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgw-SR-d1m">
+                        <rect key="frame" x="24" y="27" width="40" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="75T-9E-ElH"/>
+                            <constraint firstAttribute="width" secondItem="Bgw-SR-d1m" secondAttribute="height" multiplier="1:1" id="Gmd-8T-gK7"/>
+                        </constraints>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system">
+                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22"/>
+                        </buttonConfiguration>
+                    </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="e0l-se-dRv">
+                        <rect key="frame" x="86" y="60" width="293" height="16"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3eH-XY-gGC">
+                                <rect key="frame" x="0.0" y="0.99999999999999822" width="16" height="14.666666666666668"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3eH-XY-gGC" secondAttribute="height" multiplier="1:1" id="fj5-7A-z5g"/>
+                                    <constraint firstAttribute="width" constant="16" id="oFh-Uq-Wrl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AM 08:00 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWY-L4-OtH">
+                                <rect key="frame" x="21" y="0.0" width="272" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="e0l-se-dRv" secondAttribute="trailing" constant="32" id="2th-Gv-Xdg"/>
+                    <constraint firstItem="e0l-se-dRv" firstAttribute="top" secondItem="eMt-p8-hgQ" secondAttribute="bottom" constant="7.6699999999999999" id="Gnf-Yl-VJs"/>
+                    <constraint firstItem="eMt-p8-hgQ" firstAttribute="leading" secondItem="Bgw-SR-d1m" secondAttribute="trailing" constant="22" id="IxC-3h-t95"/>
+                    <constraint firstAttribute="bottom" secondItem="e0l-se-dRv" secondAttribute="bottom" constant="19" id="bkf-M2-2h6"/>
+                    <constraint firstItem="Bgw-SR-d1m" firstAttribute="leading" secondItem="FA8-U2-oCO" secondAttribute="leading" constant="24" id="blB-Dg-HOL"/>
+                    <constraint firstItem="e0l-se-dRv" firstAttribute="leading" secondItem="eMt-p8-hgQ" secondAttribute="leading" id="p8Q-jM-1Ju"/>
+                    <constraint firstItem="eMt-p8-hgQ" firstAttribute="top" secondItem="FA8-U2-oCO" secondAttribute="top" constant="22" id="xhd-Tt-ucN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="411.4503816793893" y="-8.0985915492957758"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle" catalog="system" width="128" height="123"/>
+        <image name="clock.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

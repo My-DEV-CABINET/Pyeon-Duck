@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H1p-0P-zJH">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -15,8 +16,20 @@
                     <view key="view" contentMode="scaleToFill" id="zhe-Vi-Lfh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0nb-Zz-Aj9">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LfF-Qe-V30"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0nb-Zz-Aj9" firstAttribute="top" secondItem="LfF-Qe-V30" secondAttribute="top" id="Qkq-CG-MdZ"/>
+                            <constraint firstItem="0nb-Zz-Aj9" firstAttribute="leading" secondItem="LfF-Qe-V30" secondAttribute="leading" id="VeD-0x-gXk"/>
+                            <constraint firstItem="LfF-Qe-V30" firstAttribute="trailing" secondItem="0nb-Zz-Aj9" secondAttribute="trailing" id="eO7-Nm-SIp"/>
+                            <constraint firstItem="LfF-Qe-V30" firstAttribute="bottom" secondItem="0nb-Zz-Aj9" secondAttribute="bottom" id="wlI-Xs-sPU"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="tEk-TF-FhO"/>
                 </viewController>
