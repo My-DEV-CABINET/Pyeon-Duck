@@ -13,11 +13,11 @@ class ExpirationCalendarViewModel {
     var date: String?
     private var dataManager = DataManager()
 
-    var expirationList: [ExpirationDate] {
+    var expirationList: [Expiration] {
         return self.dataManager.expirationList.filter { $0.date == self.date }
     }
 
-    var todayExpirationList: [ExpirationDate] {
+    var todayExpirationList: [Expiration] {
         return self.dataManager.expirationList.filter { $0.date == strToDateFormatted(Date.now) }
     }
 }

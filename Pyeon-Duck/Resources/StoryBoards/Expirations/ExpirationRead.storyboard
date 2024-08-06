@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j4u-Is-c2G">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -44,14 +45,8 @@
                                             <constraint firstAttribute="width" secondItem="6Ie-Ju-M2j" secondAttribute="height" multiplier="1:1" id="GnR-fd-Z0O"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="유통기한 품목 리스트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGB-bO-iZS">
-                                        <rect key="frame" x="12" y="460" width="369" height="27"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DJI-Q7-J2H">
-                                        <rect key="frame" x="12" y="498.00000000000006" width="30" height="28.666666666666686"/>
+                                        <rect key="frame" x="16" y="469" width="30" height="28.666666666666686"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="DJI-Q7-J2H" secondAttribute="height" multiplier="1:1" id="cSk-wD-Mu2"/>
@@ -59,27 +54,28 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZK-kq-dIg">
-                                        <rect key="frame" x="54" y="502.66666666666663" width="87" height="18.666666666666629"/>
+                                        <rect key="frame" x="58" y="473" width="87" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="x.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QNl-it-siv">
-                                        <rect key="frame" x="161" y="498.00000000000006" width="30" height="28.666666666666686"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="x.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QNl-it-siv">
+                                        <rect key="frame" x="165" y="469" width="30" height="28.666666666666686"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="5nS-xa-y9e"/>
                                             <constraint firstAttribute="width" secondItem="QNl-it-siv" secondAttribute="height" multiplier="1:1" id="6VX-sa-b0L"/>
+                                            <constraint firstAttribute="width" secondItem="QNl-it-siv" secondAttribute="height" multiplier="1:1" id="JLB-k2-Tb4"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99999999개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8s8-2s-dpV">
-                                        <rect key="frame" x="203" y="501" width="111" height="22"/>
+                                        <rect key="frame" x="207" y="473" width="111" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="j2b-Ze-hYq">
-                                        <rect key="frame" x="12" y="547" width="369" height="212"/>
+                                        <rect key="frame" x="12" y="518" width="369" height="241"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrw-US-vyd">
@@ -96,35 +92,30 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="DJI-Q7-J2H" firstAttribute="leading" secondItem="a1a-Jg-eYG" secondAttribute="leading" constant="16" id="0v0-vs-nA1"/>
                                     <constraint firstAttribute="bottom" secondItem="j2b-Ze-hYq" secondAttribute="bottom" id="6V6-0z-pPk"/>
                                     <constraint firstItem="uD4-L8-Yeh" firstAttribute="leading" secondItem="7JI-C0-tle" secondAttribute="trailing" constant="20" id="6k3-9q-jR9"/>
                                     <constraint firstItem="6Ie-Ju-M2j" firstAttribute="leading" secondItem="a1a-Jg-eYG" secondAttribute="leading" constant="12" id="9BB-Ux-ZMn"/>
                                     <constraint firstAttribute="trailing" secondItem="uD4-L8-Yeh" secondAttribute="trailing" constant="10" id="BgK-5p-seL"/>
-                                    <constraint firstItem="sGB-bO-iZS" firstAttribute="top" secondItem="6Ie-Ju-M2j" secondAttribute="bottom" constant="8" symbolic="YES" id="EDF-ZC-8Uj"/>
                                     <constraint firstItem="8s8-2s-dpV" firstAttribute="centerY" secondItem="QNl-it-siv" secondAttribute="centerY" id="F1e-dO-S8J"/>
                                     <constraint firstItem="7JI-C0-tle" firstAttribute="top" secondItem="Fpc-K7-60f" secondAttribute="bottom" constant="8" symbolic="YES" id="H3v-cV-aHS"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8s8-2s-dpV" secondAttribute="trailing" constant="16" id="HPe-Fd-xYT"/>
                                     <constraint firstItem="6Ie-Ju-M2j" firstAttribute="centerX" secondItem="a1a-Jg-eYG" secondAttribute="centerX" id="Hxn-vS-TgM"/>
-                                    <constraint firstItem="sGB-bO-iZS" firstAttribute="leading" secondItem="a1a-Jg-eYG" secondAttribute="leading" constant="12" id="IXD-hT-5mR"/>
-                                    <constraint firstItem="QNl-it-siv" firstAttribute="width" secondItem="QNl-it-siv" secondAttribute="height" multiplier="1:1" id="JLB-k2-Tb4"/>
                                     <constraint firstItem="j2b-Ze-hYq" firstAttribute="top" secondItem="DJI-Q7-J2H" secondAttribute="bottom" constant="20" id="KiP-oq-tt5"/>
                                     <constraint firstItem="8s8-2s-dpV" firstAttribute="baseline" secondItem="zZK-kq-dIg" secondAttribute="firstBaseline" id="M1I-K5-ezD"/>
                                     <constraint firstItem="7JI-C0-tle" firstAttribute="leading" secondItem="a1a-Jg-eYG" secondAttribute="leading" constant="12" id="Ng7-Qk-8is"/>
+                                    <constraint firstItem="DJI-Q7-J2H" firstAttribute="top" secondItem="6Ie-Ju-M2j" secondAttribute="bottom" constant="16" id="OBO-94-CP0"/>
                                     <constraint firstItem="Fpc-K7-60f" firstAttribute="centerX" secondItem="a1a-Jg-eYG" secondAttribute="centerX" id="To5-0Y-ZdG"/>
                                     <constraint firstItem="6Ie-Ju-M2j" firstAttribute="top" secondItem="7JI-C0-tle" secondAttribute="bottom" constant="8" symbolic="YES" id="UXT-PF-daW"/>
                                     <constraint firstItem="8s8-2s-dpV" firstAttribute="leading" secondItem="QNl-it-siv" secondAttribute="trailing" constant="12" id="dEu-oj-Oct"/>
                                     <constraint firstItem="j2b-Ze-hYq" firstAttribute="leading" secondItem="a1a-Jg-eYG" secondAttribute="leading" constant="12" id="fP3-1P-pQ5"/>
                                     <constraint firstItem="zZK-kq-dIg" firstAttribute="leading" secondItem="DJI-Q7-J2H" secondAttribute="trailing" constant="12" id="hWC-q8-bDY"/>
                                     <constraint firstItem="zZK-kq-dIg" firstAttribute="centerY" secondItem="DJI-Q7-J2H" secondAttribute="centerY" id="hfc-tp-fRB"/>
-                                    <constraint firstItem="8s8-2s-dpV" firstAttribute="top" secondItem="sGB-bO-iZS" secondAttribute="bottom" constant="14" id="j4q-Ho-ruG"/>
                                     <constraint firstItem="Fpc-K7-60f" firstAttribute="leading" secondItem="a1a-Jg-eYG" secondAttribute="leading" constant="12" id="lJA-WJ-MUw"/>
                                     <constraint firstAttribute="trailing" secondItem="j2b-Ze-hYq" secondAttribute="trailing" constant="12" id="m5P-tU-7YG"/>
                                     <constraint firstItem="QNl-it-siv" firstAttribute="leading" secondItem="zZK-kq-dIg" secondAttribute="trailing" constant="20" id="ncR-r7-kTH"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8s8-2s-dpV" secondAttribute="trailing" constant="10" id="o7s-52-POa"/>
-                                    <constraint firstItem="DJI-Q7-J2H" firstAttribute="top" secondItem="sGB-bO-iZS" secondAttribute="bottom" constant="10" id="oa4-xN-K6W"/>
                                     <constraint firstItem="Fpc-K7-60f" firstAttribute="top" secondItem="a1a-Jg-eYG" secondAttribute="top" constant="8" id="r7J-2b-Rbb"/>
                                     <constraint firstItem="uD4-L8-Yeh" firstAttribute="centerY" secondItem="7JI-C0-tle" secondAttribute="centerY" id="ssC-vj-dUF"/>
-                                    <constraint firstItem="sGB-bO-iZS" firstAttribute="centerX" secondItem="a1a-Jg-eYG" secondAttribute="centerX" id="unh-Uh-yx4"/>
-                                    <constraint firstItem="DJI-Q7-J2H" firstAttribute="leading" secondItem="sGB-bO-iZS" secondAttribute="leading" id="wYN-fr-Crt"/>
                                     <constraint firstItem="hvj-Yo-GTH" firstAttribute="bottom" secondItem="j2b-Ze-hYq" secondAttribute="bottom" id="yFp-ug-g4r"/>
                                     <constraint firstItem="QNl-it-siv" firstAttribute="baseline" secondItem="DJI-Q7-J2H" secondAttribute="baseline" id="zhU-bL-IJy"/>
                                 </constraints>
@@ -161,10 +152,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -20,7 +20,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dI1-W0-LUH">
                                 <rect key="frame" x="42.333333333333343" y="259.66666666666663" width="308.33333333333326" height="357.66666666666663"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="말씀하세요. 듣고 있어요!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikk-7F-59M">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="🎙️말씀하세요. 듣고 있어요!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikk-7F-59M">
                                         <rect key="frame" x="20" y="19.999999999999996" width="268.33333333333331" height="37.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                         <nil key="textColor"/>

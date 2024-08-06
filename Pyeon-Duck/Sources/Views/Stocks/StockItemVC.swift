@@ -109,15 +109,15 @@ extension StockItemVC: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: StockItemCell.identifier, for: indexPath) as? StockItemCell else { return UITableViewCell() }
         let item = viewModel.stockItemList[indexPath.row]
-        cell.isConfirm = item.isConfirm
-        cell.confirm(item.itemTitle ?? "N/A", Int(item.itemCount), item.itemImage ?? Data(), item.isConfirm)
-        cell.setupAlpah(item.isConfirm)
+        cell.isConfirm = item.isCheck
+        cell.confirm(item.name ?? "N/A", Int(item.count), item.image ?? Data(), item.isCheck)
+        cell.setupAlpah(item.isCheck)
 
         cell.actionHandler = { [weak self] isConfirm in
             guard let self = self else { return }
 
             HapticManager.shared.hapticImpact(style: .light)
-            viewModel.updateCompletedStatus(item, isConfirm: isConfirm, selectedCategory: viewModel.selectedStockCategory!)
+            viewModel.updateCompletedStatus(item, isConfirm: isConfirm, parentCategory: viewModel.selectedStockCategory!)
             viewWillAppear(true)
         }
 
@@ -146,7 +146,7 @@ extension StockItemVC: UITableViewDelegate {
         let item = viewModel.stockItemList[indexPath.row]
 
         let delete = UIContextualAction(style: .normal, title: "삭제") { (UIContextualAction, UIView, success: @escaping (Bool) -> Void) in
-            self.viewModel.deleteStockItem(at: item, selectedCategory: self.viewModel.selectedStockCategory!)
+            self.viewModel.deleteStockItem(at: item, parentCategory: self.viewModel.selectedStockCategory!)
             tableView.reloadData()
             success(true)
         }

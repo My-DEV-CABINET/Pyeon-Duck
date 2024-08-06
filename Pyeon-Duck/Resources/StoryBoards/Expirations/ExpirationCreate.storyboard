@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -63,7 +64,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <datePicker contentMode="scaleToFill" verticalHuggingPriority="255" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Veo-gw-Uwc">
-                                        <rect key="frame" x="32" y="429" width="329" height="36"/>
+                                        <rect key="frame" x="32" y="429" width="329" height="36.333333333333314"/>
                                         <locale key="locale" localeIdentifier="ko_KR"/>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sx-E0-gdX">
@@ -87,6 +88,24 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
                                         </buttonConfiguration>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="c7z-Wh-DrX">
+                                        <rect key="frame" x="287" y="11.999999999999972" width="94" height="40"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mUU-al-1Nn">
+                                                <rect key="frame" x="0.0" y="2.6666666666666643" width="40" height="35"/>
+                                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="mUU-al-1Nn" secondAttribute="height" multiplier="1:1" id="33u-Pe-xLZ"/>
+                                                    <constraint firstAttribute="width" constant="40" id="CTd-x9-O7C"/>
+                                                </constraints>
+                                                <imageReference key="image" image="bell.fill" catalog="system" symbolScale="small"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                            </imageView>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ba-nT-prE">
+                                                <rect key="frame" x="45" y="4.6666666666666856" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -99,6 +118,7 @@
                                     <constraint firstAttribute="bottom" secondItem="vkc-vM-U8J" secondAttribute="bottom" constant="55" id="Gn5-hL-0jd"/>
                                     <constraint firstItem="gCZ-aC-7Pu" firstAttribute="top" secondItem="fIe-Sn-8Ct" secondAttribute="bottom" constant="30" id="MOk-F6-XJY"/>
                                     <constraint firstItem="DMZ-Wy-cbs" firstAttribute="leading" secondItem="nLV-FD-0Ws" secondAttribute="trailing" constant="22" id="McF-3K-Y8o"/>
+                                    <constraint firstItem="c7z-Wh-DrX" firstAttribute="centerY" secondItem="fIe-Sn-8Ct" secondAttribute="centerY" id="PcE-Zt-eqo"/>
                                     <constraint firstAttribute="trailing" secondItem="DMZ-Wy-cbs" secondAttribute="trailing" constant="32" id="R22-j5-OKn"/>
                                     <constraint firstItem="vkc-vM-U8J" firstAttribute="leading" secondItem="5xa-bP-CcW" secondAttribute="leading" constant="32" id="bM2-dr-C0i"/>
                                     <constraint firstItem="vkc-vM-U8J" firstAttribute="top" secondItem="Veo-gw-Uwc" secondAttribute="bottom" constant="40" id="bWX-oG-uZ4"/>
@@ -108,6 +128,7 @@
                                     <constraint firstItem="vkc-vM-U8J" firstAttribute="centerX" secondItem="5xa-bP-CcW" secondAttribute="centerX" id="sDq-AC-vsH"/>
                                     <constraint firstItem="Veo-gw-Uwc" firstAttribute="top" secondItem="nLV-FD-0Ws" secondAttribute="bottom" constant="34" id="tg7-Sy-E9F"/>
                                     <constraint firstItem="0Sx-E0-gdX" firstAttribute="leading" secondItem="fIe-Sn-8Ct" secondAttribute="trailing" constant="16" id="u1e-Ld-Ch5"/>
+                                    <constraint firstAttribute="trailing" secondItem="c7z-Wh-DrX" secondAttribute="trailing" constant="12" id="w2a-La-5xv"/>
                                     <constraint firstItem="nLV-FD-0Ws" firstAttribute="leading" secondItem="5xa-bP-CcW" secondAttribute="leading" constant="32" id="xwc-fg-M7z"/>
                                 </constraints>
                             </view>
@@ -127,6 +148,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bell.fill" catalog="system" width="123" height="128"/>
         <image name="camera.circle.fill" catalog="system" width="128" height="123"/>
         <image name="eraser.fill" catalog="system" width="128" height="119"/>
         <image name="mic.circle" catalog="system" width="128" height="123"/>
@@ -135,13 +157,16 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

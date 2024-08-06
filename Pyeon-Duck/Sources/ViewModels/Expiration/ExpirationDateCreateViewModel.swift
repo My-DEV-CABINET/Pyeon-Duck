@@ -9,18 +9,18 @@ import Foundation
 
 class ExpirationDateCreateViewModel {
     var dataManager = DataManager()
-    var expirationItem: ExpirationDate?
+    var expirationItem: Expiration?
     var selectedTagNum = 1 // 1: Read 2: Update
     var sstService = SSTService.shared
 }
 
 extension ExpirationDateCreateViewModel {
-    func addExpiration(_ title: String, _ date: String, _ image: Data, _ creationDate: String, isConfirm: Bool) {
-        self.dataManager.addExpiration(title, date, image, creationDate, isConfirm: isConfirm)
+    func addExpiration(_ name: String, _ date: String, _ image: Data, isCheck: Bool) {
+        self.dataManager.addExpiration(name, image, date, isCheck: isCheck)
     }
 
-    func updateExpiration(_ expiration: ExpirationDate, newTitle: String, newDate: String, newModifiedDate: String) {
-        self.dataManager.updateExpiration(expiration, newTitle: newTitle, newDate: newDate, newModifiedDate: newModifiedDate)
+    func updateExpiration(_ expiration: Expiration, newName: String, newDate: String) {
+        self.dataManager.updateExpiration(expiration, newName: newName, newDate: newDate)
     }
 }
 

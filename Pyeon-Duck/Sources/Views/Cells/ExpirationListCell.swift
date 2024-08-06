@@ -56,8 +56,8 @@ extension ExpirationListCell {
     func addView() {
         contentView.addSubview(baseView)
 
-        [itemImage, titleLabel, checkButton].forEach {
-            baseView.addSubview($0)
+        for item in [itemImage, titleLabel, checkButton] {
+            baseView.addSubview(item)
         }
     }
 
@@ -157,34 +157,3 @@ extension ExpirationListCell {
         }
     }
 }
-
-//// UITableViewCell을 SwiftUI 뷰로 변환
-// struct ExpirationListCellPreview: UIViewRepresentable {
-//    func makeUIView(context: Context) -> UIView {
-//        let cell = ExpirationListCell(style: .default, reuseIdentifier: nil)
-//        let container = UIView(frame: CGRect(x: 0, y: 0, width: 375, height: 80))
-//        container.addSubview(cell)
-//        cell.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            cell.topAnchor.constraint(equalTo: container.topAnchor),
-//            cell.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-//            cell.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-//            cell.bottomAnchor.constraint(equalTo: container.bottomAnchor),
-//        ])
-//        return container
-//    }
-//
-//    func updateUIView(_ uiView: UIView, context: Context) {
-//        // SwiftUI 뷰 업데이트
-//    }
-// }
-//
-//// SwiftUI 프리뷰 제공
-// struct ExpirationListCellPreview_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ExpirationListCellPreview()
-//            .previewLayout(.fixed(width: 375, height: 80))
-//            .frame(height: 90)
-//            .padding()
-//    }
-// }

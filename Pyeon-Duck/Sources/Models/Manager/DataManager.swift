@@ -9,63 +9,58 @@ import CoreData
 import Foundation
 
 class DataManager {
-    private(set) var expirationList: [ExpirationDate] = []
+    private(set) var expirationList: [Expiration] = []
     private(set) var stockCategoryList: [StockCategory] = []
     private(set) var stockItemList: [StockItem] = []
 
     var context = CoreDataService.context
 }
 
-// MARK: - Expiration CRUD
+// MARK: - 유통기한 CRUD
 
 // CRUD
 extension DataManager {
     // Create
-    func addExpiration(_ title: String, _ date: String, _ image: Data, _ creationDate: String, isConfirm: Bool) {
-        let newItem = ExpirationDate(context: context)
+    func addExpiration(_ name: String, _ image: Data, _ date: String, isCheck: Bool) {
+        let newItem = Expiration(context: context)
         newItem.id = UUID()
-        newItem.title = title
-        newItem.itemImage = image
+        newItem.name = name
+        newItem.image = image
         newItem.date = date
-        newItem.creationDate = creationDate
-        newItem.isConfirm = isConfirm
+        newItem.isCheck = isCheck
 
-        print("#### DataManager Insert : \(newItem)")
         do {
             try context.save()
-            print("##### \(expirationList)")
             requestExpiration()
         } catch {
-            print("Insert Error: \(error)")
+            print("#### Insert Error: \(error)")
         }
     }
 
     // Read
     func requestExpiration() {
         do {
-            expirationList = try context.fetch(ExpirationDate.fetchRequest())
-
+            expirationList = try context.fetch(Expiration.fetchRequest())
         } catch {
-            print("Fetch Error: \(error)")
+            print("#### Fetch Error: \(error)")
         }
     }
 
     // Delete
-    func deleteExpiration(at expiration: ExpirationDate) {
+    func deleteExpiration(at expiration: Expiration) {
         context.delete(expiration)
         do {
             try context.save()
-            requestExpiration() // 배열을 다시 fetch하여 갱신
+            requestExpiration()
         } catch {
             print("#### Delete Error : \(error)")
         }
     }
 
     // Update - Content
-    func updateExpiration(_ expiration: ExpirationDate, newTitle: String, newDate: String, newModifiedDate: String) {
-        expiration.title = newTitle
+    func updateExpiration(_ expiration: Expiration, newName: String, newDate: String) {
+        expiration.name = newName
         expiration.date = newDate
-        expiration.modifiedDate = newModifiedDate
 
         do {
             try context.save()
@@ -76,8 +71,8 @@ extension DataManager {
     }
 
     // Update - Status
-    func updateConfirm(_ expiration: ExpirationDate, isConfirm: Bool) {
-        expiration.isConfirm = isConfirm
+    func updateConfirm(_ expiration: Expiration, isCheck: Bool) {
+        expiration.isCheck = isCheck
 
         do {
             try context.save()
@@ -88,17 +83,16 @@ extension DataManager {
     }
 }
 
-// MARK: - StockCategory CRUD
+// MARK: - 보충상품: 카테고리 CRUD
 
 extension DataManager {
     // Create
-    func addStockCategory(_ title: String) {
+    func addStockCategory(_ name: String) {
         var newItem = StockCategory(context: context)
-        newItem.categoryTitle = title
+        newItem.name = name
 
         do {
             try context.save()
-            print("#### \(stockCategoryList)")
             requestStockCategory()
         } catch {
             print("#### Insert Error: \(error)")
@@ -128,8 +122,8 @@ extension DataManager {
     }
 
     // Update
-    func updateStockCategory(_ stockCategory: StockCategory, title: String) {
-        stockCategory.categoryTitle = title
+    func updateStockCategory(_ stockCategory: StockCategory, name: String) {
+        stockCategory.name = name
 
         do {
             try context.save()
@@ -140,29 +134,28 @@ extension DataManager {
     }
 }
 
-// MARK: - StockItem CRUD
+// MARK: - 상품보충: 아이템 CRUD
 
 extension DataManager {
     // Create
-    func addStockItem(_ title: String, _ image: Data, _ count: Int, selectedCategory: StockCategory) {
+    func addStockItem(_ name: String, _ image: Data, _ count: Int, parentCategory: StockCategory) {
         let newItem = StockItem(context: context)
-        newItem.itemTitle = title
-        newItem.itemImage = image
-        newItem.itemCount = Int64(count)
-        newItem.parentCategory = selectedCategory
+        newItem.name = name
+        newItem.image = image
+        newItem.count = Int64(count)
+        newItem.parentCategory = parentCategory
 
         do {
             try context.save()
-            requestStockItem(selectedCategory: selectedCategory)
-            print("#### Save Stock : \(stockItemList.count)")
+            requestStockItem(parentCategory: parentCategory)
         } catch {
             print("#### StockItem insert error: \(error)")
         }
     }
 
     // Read
-    func requestStockItem(with request: NSFetchRequest<StockItem> = StockItem.fetchRequest(), predicate: NSPredicate? = nil, selectedCategory: StockCategory) {
-        let categoryPredicate = NSPredicate(format: "parentCategory.categoryTitle MATCHES %@", selectedCategory.categoryTitle ?? "N/A")
+    func requestStockItem(with request: NSFetchRequest<StockItem> = StockItem.fetchRequest(), predicate: NSPredicate? = nil, parentCategory: StockCategory) {
+        let categoryPredicate = NSPredicate(format: "parentCategory.categoryTitle MATCHES %@", parentCategory.name ?? "N/A")
 
         if let addtionalPredicate = predicate {
             request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [categoryPredicate, addtionalPredicate])
@@ -173,44 +166,43 @@ extension DataManager {
         do {
             stockItemList = try context.fetch(request)
 
-            print("#### Start : \(stockItemList.count)")
         } catch {
             print("#### StockItem request error: \(error)")
         }
     }
 
     // Delete
-    func deleteStockItem(at stockItem: StockItem, _ selectedCategory: StockCategory) {
+    func deleteStockItem(at stockItem: StockItem, _ parentCategory: StockCategory) {
         context.delete(stockItem)
 
         do {
             try context.save()
-            requestStockItem(selectedCategory: selectedCategory)
+            requestStockItem(parentCategory: parentCategory)
         } catch {
             print("#### Delete Stock Item Error : \(error)")
         }
     }
 
     // Update - Content
-    func updateStockItem(stockItem: StockItem, newTitle: String, newImage: Data, newCount: Int, selectedCategory: StockCategory) {
-        stockItem.itemTitle = newTitle
-        stockItem.itemImage = newImage
-        stockItem.itemCount = Int64(newCount)
+    func updateStockItem(stockItem: StockItem, newName: String, newImage: Data, newCount: Int, parentCategory: StockCategory) {
+        stockItem.name = newName
+        stockItem.image = newImage
+        stockItem.count = Int64(newCount)
 
         do {
             try context.save()
-            requestStockItem(selectedCategory: selectedCategory)
+            requestStockItem(parentCategory: parentCategory)
         } catch {
             print("#### Update Stock Item Error : \(error)")
         }
     }
 
-    func updateStockConfirm(_ stockItem: StockItem, isConfirm: Bool, selectedCategory: StockCategory) {
-        stockItem.isConfirm = isConfirm
+    func updateStockConfirm(_ stockItem: StockItem, isCheck: Bool, parentCategory: StockCategory) {
+        stockItem.isCheck = isCheck
 
         do {
             try context.save()
-            requestStockItem(selectedCategory: selectedCategory)
+            requestStockItem(parentCategory: parentCategory)
         } catch {
             print("#### Update Error : \(error)")
         }

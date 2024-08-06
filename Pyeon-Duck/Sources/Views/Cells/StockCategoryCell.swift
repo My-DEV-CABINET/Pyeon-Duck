@@ -5,7 +5,6 @@
 //  Created by 준우의 MacBook 16 on 12/19/23.
 //
 
-import SwiftUI
 import UIKit
 
 // Task - 셀 UI 변경
@@ -99,34 +98,5 @@ extension StockCategoryCell {
             disclosureImage.widthAnchor.constraint(equalToConstant: 30),
             disclosureImage.heightAnchor.constraint(equalToConstant: 30),
         ])
-    }
-}
-
-struct StocCategoryCellPreview: UIViewRepresentable {
-    func makeUIView(context: Context) -> UIView {
-        let cell = StockCategoryCell(style: .default, reuseIdentifier: nil)
-        let container = UIView(frame: CGRect(x: 0, y: 0, width: 375, height: 50))
-        container.addSubview(cell)
-        cell.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            cell.topAnchor.constraint(equalTo: container.topAnchor),
-            cell.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-            cell.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-            cell.bottomAnchor.constraint(equalTo: container.bottomAnchor),
-        ])
-        return container
-    }
-
-    func updateUIView(_ uiView: UIView, context: Context) {
-        // SwiftUI 뷰 업데이트
-    }
-}
-
-struct StocCategoryCellPreview_Previews: PreviewProvider {
-    static var previews: some View {
-        StocCategoryCellPreview()
-            .previewLayout(.sizeThatFits)
-            .frame(height: 90)
-            .padding()
     }
 }

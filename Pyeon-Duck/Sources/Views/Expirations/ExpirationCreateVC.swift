@@ -139,7 +139,7 @@ extension ExpirationCreateVC {
         if viewModel.expirationItem == nil {
             imageView.image = UIImage(systemName: "camera")
         } else {
-            if let image = viewModel.expirationItem?.itemImage {
+            if let image = viewModel.expirationItem?.image {
                 imageView.image = UIImage(data: image)
             }
         }

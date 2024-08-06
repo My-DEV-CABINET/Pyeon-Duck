@@ -44,7 +44,6 @@ class CalenderService {
         else {
             return 0
         }
-        //    print(startOfMonth)
 
         // 첫 날과 마지막 날의 주 번호를 구함
         let firstWeek = calendar.component(.weekday, from: startOfMonth)

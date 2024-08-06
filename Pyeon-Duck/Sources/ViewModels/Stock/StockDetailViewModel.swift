@@ -13,11 +13,11 @@ class StockDetailViewModel {
     var selectedCategory: StockCategory?
 
     var stockItemTitle: String {
-        return self.stockItem.itemTitle ?? "N/A"
+        return self.stockItem.name ?? "N/A"
     }
 
     var stockItemImage: Data {
-        if let imageData = self.stockItem.itemImage {
+        if let imageData = self.stockItem.image {
             return imageData
         } else if let defaultImage = UIImage(systemName: "camera"), let pngData = defaultImage.pngData() {
             return pngData
@@ -29,7 +29,7 @@ class StockDetailViewModel {
     }
     
     var stockItemCount: Int {
-        return Int(self.stockItem.itemCount)
+        return Int(self.stockItem.count)
     }
     
 }

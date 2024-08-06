@@ -137,7 +137,7 @@ extension ExpirationDetailVC {
     func createImageView() {
         // 대체 이미지 설정
         let defaultImage = UIImage(systemName: "bell")
-        if let image = viewModel.selectedItem?.itemImage {
+        if let image = viewModel.selectedItem?.image {
             imageView.image = UIImage(data: image)
         } else {
             imageView.image = defaultImage
@@ -172,7 +172,7 @@ extension ExpirationDetailVC {
     }
 
     func createItemTitleLabel() {
-        itemTitleLabel.text = viewModel.selectedItem?.title
+        itemTitleLabel.text = viewModel.selectedItem?.name
         itemTitleLabel.font = .systemFont(ofSize: 24, weight: .bold)
 
         NSLayoutConstraint.activate([
@@ -220,7 +220,7 @@ extension ExpirationDetailVC {
     }
 
     func createCreateDateLabel() {
-        createDateLabel.text = viewModel.selectedItem?.creationDate
+        createDateLabel.text = viewModel.selectedItem?.date
         createDateLabel.font = .systemFont(ofSize: 24, weight: .bold)
 
         NSLayoutConstraint.activate([

@@ -4,6 +4,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,12 +38,38 @@
                     <connections>
                         <segue destination="i1I-za-L1O" kind="relationship" relationship="viewControllers" id="agF-e2-eYf"/>
                         <segue destination="nni-oL-Yxs" kind="relationship" relationship="viewControllers" id="CPJ-BI-vaq"/>
-                        <segue destination="Fi4-mf-GGr" kind="relationship" relationship="viewControllers" id="ZfI-EX-V8S"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEm-iW-2cT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-159" y="-100"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NJl-pC-HLg">
+            <objects>
+                <viewController id="CR9-UX-IHr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ISu-fR-lO9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6za-02-GCF">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9LS-Pn-70B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6za-02-GCF" firstAttribute="top" secondItem="9LS-Pn-70B" secondAttribute="top" id="K4t-AK-hJc"/>
+                            <constraint firstItem="6za-02-GCF" firstAttribute="centerY" secondItem="9LS-Pn-70B" secondAttribute="centerY" id="KL6-s6-mR6"/>
+                            <constraint firstItem="6za-02-GCF" firstAttribute="leading" secondItem="9LS-Pn-70B" secondAttribute="leading" id="h5V-Cl-FLb"/>
+                            <constraint firstItem="6za-02-GCF" firstAttribute="centerX" secondItem="9LS-Pn-70B" secondAttribute="centerX" id="rsz-Rd-FEM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0h-zE-fde" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="112"/>
         </scene>
         <!--Expiration-->
         <scene sceneID="arI-E8-XOT">
@@ -63,15 +91,10 @@
             </objects>
             <point key="canvasLocation" x="-160" y="390"/>
         </scene>
-        <!--Search-->
-        <scene sceneID="KZp-TH-oOT">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Search" id="Fi4-mf-GGr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="fGE-f7-yOI"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tdf-y1-bUd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="106" y="389"/>
-        </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

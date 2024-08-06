@@ -23,21 +23,21 @@ extension ExpirationListViewModel {
         self.dataManager.expirationList.count
     }
 
-    var expirationList: [ExpirationDate] {
+    var expirationList: [Expiration] {
         return self.dataManager.expirationList.filter { $0.date == (self.selectedDate ?? dateToStrFormatted(Date.now)) }
-            .sorted(by: { $0.isConfirm && !$1.isConfirm })
+            .sorted(by: { $0.isCheck && !$1.isCheck })
     }
 
     func fetchExpirationList() {
         self.dataManager.requestExpiration()
     }
 
-    func deleteExpiration(_ expiration: ExpirationDate) {
+    func deleteExpiration(_ expiration: Expiration) {
         self.dataManager.deleteExpiration(at: expiration)
     }
 
-    func updateCompletedStatus(_ expiration: ExpirationDate, isConfirm: Bool) {
-        self.dataManager.updateConfirm(expiration, isConfirm: isConfirm)
+    func updateCompletedStatus(_ expiration: Expiration, isConfirm: Bool) {
+        self.dataManager.updateConfirm(expiration, isCheck: isConfirm)
     }
 }
 

@@ -17,10 +17,10 @@ class StockCreateViewModel {
 
 extension StockCreateViewModel {
     func addStockItem(_ title: String, _ image: Data, _ count: Int64, _ selectedCategory: StockCategory) {
-        self.dataManager.addStockItem(title, image, Int(count), selectedCategory: selectedCategory)
+        self.dataManager.addStockItem(title, image, Int(count), parentCategory: selectedCategory)
     }
 
     func updateStockItem(stockItem: StockItem, newTitle: String, newImage: Data, newCount: Int, selectedCategory: StockCategory) {
-        self.dataManager.updateStockItem(stockItem: stockItem, newTitle: newTitle, newImage: newImage, newCount: newCount, selectedCategory: selectedCategory)
+        self.dataManager.updateStockItem(stockItem: stockItem, newName: newTitle, newImage: newImage, newCount: newCount, parentCategory: selectedCategory)
     }
 }

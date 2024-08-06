@@ -8,7 +8,7 @@
 import Foundation
 
 class ExpirationDetailViewModel {
-    var selectedItem: ExpirationDate?
+    var selectedItem: Expiration?
 }
 
 extension ExpirationDetailViewModel {

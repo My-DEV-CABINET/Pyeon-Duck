@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ExpirationCalendarVC: UIViewController {
+final class ExpirationCalendarVC: UIViewController {
     var viewModel = ExpirationCalendarViewModel()
 
     // 달력 선언
@@ -49,9 +49,6 @@ extension ExpirationCalendarVC {
         tabBarController?.navigationItem.title = "유통기한 달력"
         tabBarController?.navigationController?.navigationBar.prefersLargeTitles = true
         tabBarController?.navigationItem.rightBarButtonItem = nil
-
-        viewModel.fetchExpirationList()
-        setUpUI()
     }
 }
 
@@ -141,7 +138,7 @@ extension ExpirationCalendarVC: UICalendarViewDelegate, UICalendarSelectionSingl
         if let date = Calendar.current.date(from: dateComponents) {
             viewModel.date = viewModel.strToDateFormatted(date)
         }
-        
+
         if viewModel.expirationList.count > 0 {
             return .customView {
                 let view = UIView()
@@ -150,7 +147,7 @@ extension ExpirationCalendarVC: UICalendarViewDelegate, UICalendarSelectionSingl
                 view.frame.size = .init(width: 10, height: 10)
                 return view
             }
-            
+
         } else {
             return nil
         }
