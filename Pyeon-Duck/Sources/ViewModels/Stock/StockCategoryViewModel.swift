@@ -7,40 +7,4 @@
 
 import Foundation
 
-class StockCategoryViewModel {
-    private var dataManager: DataManager
-
-    var requestStockCategoryCount: Int {
-        self.dataManager.stockCategoryList.count
-    }
-
-    var stockCategoryList: [StockCategory] {
-        return self.dataManager.stockCategoryList
-    }
-
-    init(dataManager: DataManager) {
-        self.dataManager = dataManager
-    }
-}
-
-// MARK: - CRUD
-
-extension StockCategoryViewModel {
-    func fetchStockCategory() {
-        self.dataManager.requestStockCategory()
-    }
-
-    func addStockCategory(_ title: String) {
-        self.dataManager.addStockCategory(title)
-    }
-
-    func deleteStockCategory(at indexPath: IndexPath) {
-        self.dataManager.deleteStockCategory(at: indexPath)
-    }
-
-    // Task
-    // Update
-    func updateStockCategory(_ stockCategory: StockCategory, title: String) {
-        self.dataManager.updateStockCategory(stockCategory, name: title)
-    }
-}
+final class StockCategoryViewModel {}

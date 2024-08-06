@@ -48,7 +48,13 @@ let project = Project(
             infoPlist: info,
             sources: sources,
             resources: resources,
-            dependencies: [],
+            dependencies: [
+                .external(name: "RxDataSources"),
+                .external(name: "RxSwift"),
+                .external(name: "RxCocoa"),
+                .external(name: "RxRelay"),
+                .external(name: "Alamofire")
+            ],
             settings: .settings(configurations: [
                 .debug(
                     name: Settings.debug.rawValue,
