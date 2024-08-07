@@ -21,7 +21,7 @@ class DataManager {
 // CRUD
 extension DataManager {
     // Create
-    func addExpiration(_ name: String, _ image: Data, _ date: String, isCheck: Bool) {
+    func addExpiration(_ name: String, _ image: Data, _ date: Date, isCheck: Bool) {
         let newItem = Expiration(context: context)
         newItem.id = UUID()
         newItem.name = name
@@ -58,7 +58,7 @@ extension DataManager {
     }
 
     // Update - Content
-    func updateExpiration(_ expiration: Expiration, newName: String, newDate: String) {
+    func updateExpiration(_ expiration: Expiration, newName: String, newDate: Date) {
         expiration.name = newName
         expiration.date = newDate
 
@@ -155,7 +155,7 @@ extension DataManager {
 
     // Read
     func requestStockItem(with request: NSFetchRequest<StockItem> = StockItem.fetchRequest(), predicate: NSPredicate? = nil, parentCategory: StockCategory) {
-        let categoryPredicate = NSPredicate(format: "parentCategory.categoryTitle MATCHES %@", parentCategory.name ?? "N/A")
+        let categoryPredicate = NSPredicate(format: "parentCategory.name MATCHES %@", parentCategory.name ?? "N/A")
 
         if let addtionalPredicate = predicate {
             request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [categoryPredicate, addtionalPredicate])

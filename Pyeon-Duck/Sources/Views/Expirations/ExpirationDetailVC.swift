@@ -7,4 +7,6 @@
 
 import UIKit
 
-final class ExpirationDetailVC: UIViewController {}
+final class ExpirationDetailVC: UIViewController {
+    
+}

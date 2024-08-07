@@ -12,13 +12,13 @@
         <!--Item 1-->
         <scene sceneID="Fuw-ZD-4AX">
             <objects>
-                <viewController keyboardType="off" id="j4u-Is-c2G" customClass="ExpirationCalendarVC" customModule="Pyeon_Duck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExpirationCalendarVC" keyboardType="off" id="j4u-Is-c2G" customClass="ExpirationCalendarVC" customModule="Pyeon_Duck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7LP-d5-dpo">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="1106"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1a-Jg-eYG">
-                                <rect key="frame" x="0.0" y="59" width="393" height="1013"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2024.07.31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpc-K7-60f">
                                         <rect key="frame" x="12" y="8" width="369" height="38.333333333333336"/>
@@ -83,21 +83,9 @@
                                         </subviews>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="j2b-Ze-hYq">
-                                        <rect key="frame" x="12" y="528.66666666666663" width="369" height="484.33333333333337"/>
+                                        <rect key="frame" x="12" y="528.66666666666663" width="369" height="230.33333333333337"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrw-US-vyd">
-                                        <rect key="frame" x="313" y="933" width="60" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="1vv-WB-F6c"/>
-                                            <constraint firstAttribute="width" secondItem="xrw-US-vyd" secondAttribute="height" multiplier="1:1" id="7k6-gG-cl2"/>
-                                        </constraints>
-                                        <color key="tintColor" systemColor="systemRedColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="40"/>
-                                        </buttonConfiguration>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Cna-oa-NDz" firstAttribute="centerX" secondItem="a1a-Jg-eYG" secondAttribute="centerX" id="10B-08-LAL"/>
@@ -131,9 +119,7 @@
                         <viewLayoutGuide key="safeArea" id="pZH-1S-enD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pZH-1S-enD" firstAttribute="bottom" secondItem="xrw-US-vyd" secondAttribute="bottom" constant="20" id="0Sb-ZX-MXq"/>
                             <constraint firstItem="j2b-Ze-hYq" firstAttribute="centerX" secondItem="pZH-1S-enD" secondAttribute="centerX" id="Apy-Ck-ZK2"/>
-                            <constraint firstItem="pZH-1S-enD" firstAttribute="trailing" secondItem="xrw-US-vyd" secondAttribute="trailing" constant="20" id="JKX-dL-Pm9"/>
                             <constraint firstItem="pZH-1S-enD" firstAttribute="bottom" secondItem="a1a-Jg-eYG" secondAttribute="bottom" id="PFO-KR-xnG"/>
                             <constraint firstItem="a1a-Jg-eYG" firstAttribute="top" secondItem="pZH-1S-enD" secondAttribute="top" id="h9N-lF-Uyk"/>
                             <constraint firstItem="a1a-Jg-eYG" firstAttribute="leading" secondItem="pZH-1S-enD" secondAttribute="leading" id="pwU-lu-aPz"/>
@@ -143,7 +129,15 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Vdd-mr-H6U"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="393" height="1106"/>
+                    <connections>
+                        <outlet property="confirmLable" destination="zZK-kq-dIg" id="I6q-Vh-ekl"/>
+                        <outlet property="countLabel" destination="uD4-L8-Yeh" id="wRs-BO-Ha7"/>
+                        <outlet property="dateLabel" destination="Fpc-K7-60f" id="X1k-Ki-GCI"/>
+                        <outlet property="nonConfirmLabel" destination="8s8-2s-dpV" id="oaK-Lh-FEu"/>
+                        <outlet property="tableView" destination="j2b-Ze-hYq" id="AuF-50-GKM"/>
+                        <outletCollection property="baseView" destination="6Ie-Ju-M2j" collectionClass="NSMutableArray" id="PyT-8G-QzI"/>
+                        <outletCollection property="baseView" destination="Cna-oa-NDz" collectionClass="NSMutableArray" id="09O-7N-L1w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xuo-FS-5SX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,16 +146,15 @@
     </scenes>
     <resources>
         <image name="checkmark.circle" catalog="system" width="128" height="123"/>
-        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <image name="x.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
